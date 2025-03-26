@@ -135,7 +135,7 @@ class MainScreen(Screen):
     def open_file_chooser(self, instance):
         content = BoxLayout(orientation='vertical')
         file_chooser = FileChooserIconView()
-        file_chooser.path = r"C:\Users\Admin\OneDrive\Documents\Dermatter app\ref"
+        file_chooser.path = r"C:\Users\Admin\OneDrive - Amity University\Documents\GitHub\Projects\Dermatter app\ref"
         content.add_widget(file_chooser)
 
         def on_select_file(instance, selection):
@@ -152,7 +152,7 @@ class MainScreen(Screen):
 
     def compare_images(self, instance):
         user_img_path = self.image_path_input.text
-        folder_path = r"C:\Users\Admin\OneDrive\Documents\Dermatter app\skin"
+        folder_path = r"C:\Users\Admin\OneDrive - Amity University\Documents\GitHub\Projects\Dermatter app\skin"
 
         if not user_img_path:
             self.show_popup('Error', 'Please select the path of the user image.')
