@@ -29,6 +29,11 @@ if st.button("Predict"):
             prediction = smodel.predict(img_array)
             digit = np.argmax(prediction)
             st.success(f"Predicted digit: {digit}")
+            prediction = prediction[0]
+            top_3_indices = prediction.argsort()[-3:][::-1]
+            st.markdown("###Top 3 Predictions:")
+            for i in top_3_indices:
+                st.write(f"**Digit {i}** — {prediction[i]*100:.2f}% confidence")
         st.success("Prediction complete!")
     else:
         st.error("Please draw a digit before predicting.")
