@@ -1,3 +1,7 @@
+import os
+
+print("Current directory contents:", os.listdir())
+
 import numpy as np
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
