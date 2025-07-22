@@ -31,7 +31,7 @@ if st.button("Predict"):
             st.success(f"Predicted digit: {digit}")
             prediction = prediction[0]
             top_3_indices = prediction.argsort()[-3:][::-1]
-            st.markdown("###Top 3 Predictions:")
+            st.markdown("Top 3 Predictions:")
             for i in top_3_indices:
                 st.write(f"**Digit {i}** — {prediction[i]*100:.2f}% confidence")
         st.success("Prediction complete!")
