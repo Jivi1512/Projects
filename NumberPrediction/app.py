@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 from tensorflow.keras.models import load_model
 from PIL import Image, ImageOps
-smodel=load_model("mnist_model12.keras")
+smodel=load_model("mnist_model12.h5")
 
 st.title("Predict your digit!")
 st.write("Draw a single digit number (0-9) in the box below and click 'Predict'.")
